@@ -2,10 +2,9 @@
 from sys import argv
 
 if __name__ == "__main__":
-    argz = argv[1:]
-    arg_len = len(argz)
-    arg_txt = "argument" if arg_len == 1 else 'arguments'
-    arg_end = "." if arg_len < 1 else ':'
-    print(f"{arg_len} {arg_txt}{arg_end}")
-    for idx, arg in enumerate(argz):
-        print(f"{idx + 1}: {arg}")
+    args = argv[1:]
+    args_len = len(args)
+    print("{} arguments{}".format(args_len, ":" if args_len > 0 else '.'))
+
+    for index, arg in enumerate(args):
+        print("{}: {}".format(index + 1, arg))
