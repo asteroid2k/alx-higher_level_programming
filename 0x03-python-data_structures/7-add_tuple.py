@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    a1, *a2 = tuple_a
-    b1, *b2 = tuple_b
-    a1 = a1 if a1 else 0
-    b1 = b1 if b1 else 0
-    a2 = a2[0] if a2 else 0
-    b2 = b2[0] if b2 else 0
-    return (a1 + b1, a2 + b2)
+    res = [0, 0]
+    for x in range(2):
+        a = tuple_a[x:][0] if tuple_a[x:] else 0
+        b = tuple_b[x:][0] if tuple_b[x:] else 0
+        res[x] = a + b
+    return tuple(res)
