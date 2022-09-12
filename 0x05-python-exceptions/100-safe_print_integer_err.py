@@ -3,12 +3,9 @@ import sys
 
 
 def safe_print_integer_err(value):
-    ex = ""
     try:
         print("{:d}".format(value))
         return True
-    except Exception as e:
-        ex = e
+    except (ValueError, TypeError) as e:
+        sys.stderr.write("Exception: {}".format(e))
         return False
-    finally:
-        sys.stderr.write("Exception: {}".format(ex))
