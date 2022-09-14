@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+'''Module to define a Square class'''
+
+
 class Square:
-    def __init__():
-        pass
+    '''Represents a Square class'''
+    pass
