@@ -80,6 +80,7 @@ class Rectangle:
         del self
         Rectangle.number_of_instances -= 1
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """This is the print of the rectangle"""
         if not isinstance(rect_1, Rectangle):
@@ -92,5 +93,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """This is the print of the rectangle"""
+        """Method to create a square"""
         return cls(size, size)
