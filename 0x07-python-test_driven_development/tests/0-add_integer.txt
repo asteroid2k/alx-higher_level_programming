@@ -15,21 +15,27 @@ Test Cases:
     12
 
     2. only required argument
->>> add_integer(0)
-98
+    >>> add_integer(0)
+    98
 
-3. when first param is not an integer
->>> add_integer("a", 2)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
+    3. when first param is not an integer
+    >>> add_integer("a", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
 
-4. when second param is not an int
->>> add_integer(9, None)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
+    4. when second param is not an int
+    >>> add_integer(9, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
 
-5. returns int even when one param is a float
->>> type(add_integer(1, 1.5))
-<class 'int'>
+    5. returns int even when one param is a float
+    >>> type(add_integer(1, 1.5))
+    <class 'int'>
+
+    6. no arguments
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
