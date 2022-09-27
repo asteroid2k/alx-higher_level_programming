@@ -9,11 +9,19 @@ Import the ``is_same_class`` class from the ``2-is_same_class.py`` module:
     >>> is_same_class = __import__("2-is_same_class").is_same_class
 
 Test Cases:
-    1. Same class
+    1. int
     >>> is_same_class(1,int)
     True
 
-    1. Child class
+    1. float
+    >>> is_same_class(1,float)
+    True
+
+    1. int
+    >>> is_same_class(1,int)
+    True
+
+    2. Sub class
     >>> class IntChild(int):
     ...     pass
     >>> is_same_class(1,IntChild)
