@@ -1,0 +1,18 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+Import the ``MyList`` class from the ``1-my_list`` module:
+
+    >>> MyList = __import__("1-my_list").MyList
+
+Test Cases:
+    1. Sorted
+    >>> MyList([1,2,3]).print_sorted()
+    [1, 2, 3]
+
+    1. Unsorted
+    >>> MyList([1,4 ,2,3]).print_sorted()
+    [1, 2, 3, 4]
