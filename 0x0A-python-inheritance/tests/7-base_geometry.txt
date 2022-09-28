@@ -7,25 +7,62 @@ Using ``BaseGeometry``
 Import the ``BaseGeometry`` class from the ``7-base_geometry`` module:
 
     >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+    >>> bg = BaseGeometry()
 
 Test Cases:
     1. Less than 0
-    >>> BaseGeometry().integer_validator('age', -90)
+    >>> bg.integer_validator('age', -90)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
 
     2. Not int
-    >>> BaseGeometry().integer_validator('age', "90")
+    >>> bg.integer_validator('age', "90")
     Traceback (most recent call last):
     ...
     TypeError: age must be an integer
 
     3. Valid int
-    >>> BaseGeometry().integer_validator('age', 69)
+    >>> bg.integer_validator('age', 69)
 
     4. Valid int
-    >>> BaseGeometry().integer_validator('age', None)
+    >>> bg.integer_validator('age', None)
     Traceback (most recent call last):
     ...
     TypeError: age must be an integer
+
+    5. integer validator without arguments
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    6. with float
+    >>> bg.integer_validator("float", 3.25)
+    Traceback (most recent call last):
+    TypeError: float must be an integer
+
+    7. with tuple
+    >>> bg.integer_validator("tuple", (1,))
+    Traceback (most recent call last):
+    TypeError: tuple must be an integer
+
+    8. with empty list
+    >>> bg.integer_validator("list", [])
+    Traceback (most recent call last):
+    TypeError: list must be an integer
+
+    9. with list
+    >>> bg.integer_validator("list", [1, 2, 3])
+    Traceback (most recent call last):
+    TypeError: list must be an integer
+
+    10. with empty dict
+    >>> bg.integer_validator("dict", {})
+    Traceback (most recent call last):
+    TypeError: dict must be an integer
+
+    11. with set
+    >>> bg.integer_validator("set", {1, 2 ,3})
+    Traceback (most recent call last):
+    TypeError: set must be an integer
