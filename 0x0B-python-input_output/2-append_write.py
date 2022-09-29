@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Module for append_file method.
+"""Module for append_write method.
 """
 
 
-def append_file(filename="", text="") -> int:
+def append_write(filename="", text="") -> int:
     """Appends to a text file (UTF8).
     Args:
         filename (str): The name of the file to append.
