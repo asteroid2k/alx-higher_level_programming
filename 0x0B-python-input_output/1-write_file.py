@@ -6,7 +6,7 @@
 def write_file(filename="", text="") -> int:
     """Writes to a text file (UTF8).
     Args:
-        filename (str): The name of the file to read.
+        filename (str): The name of the file to write.
         text (str): text to write to file.
     Returns:
         len (int): Number of characters written
