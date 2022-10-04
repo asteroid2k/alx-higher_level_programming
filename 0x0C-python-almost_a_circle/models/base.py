@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Module that defines base class"""
+"""Module that defines base model"""
 
 
 class Base():
@@ -8,10 +8,10 @@ class Base():
     __nb_objects = 0
 
     def __init__(self, id=None) -> None:
-        self.inc_count()
         if id is not None:
             self.id = id
         else:
+            self.inc_count()
             self.id = self.__nb_objects
 
     @classmethod
